@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+     <!-- font end -->
     <title>Project-Website</title>
     <link rel="stylesheet" href="./css/style.css" >
 </head>
@@ -29,14 +34,34 @@
                 </menu>
                 <!--nav menu end  -->
                 <!-- nav btn start -->
-                <div class="navbtn flex align-items-center">
-                    <a href="" class="btn btnBg">Login</a>
-                    <a href="" class="btn btnOutline">Sign Up</a>
+                <div class="navbtn">
+                    <ul class="flex">
+                        <li>
+                            <button class="btn btnLogin">Login</button>
+                        <li>
+                            <button class="btn btnBg">Sign Up</button>   
+                        </li>
+                    </ul>    
                 </div>
                 <!-- nav btn end -->
+
             </div>
         </div>
     </nav>
     <!-- nav end -->
+    <!-- hero section start -->
+     <section id="hero">
+        <div class="container flex align-items-center heroWrapper">
+            <div class="heroContent">
+                <h1>Lessons and insights</h1>
+                <h1>from 8 years</h1>    
+                <p>Where to grow your business as a photographer: site or social media?</p>
+                <button class="btn">Register</button>
+            </div>
+            <div class="heroImg">
+                <img src="./assets/heroImg.png" alt="Hero">
+            </div>
+        </div>
+    <!-- hero section end -->
 </body>
 </html>

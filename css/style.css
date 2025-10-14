@@ -1,109 +1,256 @@
-/* css reset start */
- :root{
-    --btn-color: #4CAF4F;
- }
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-}
+/* css reset start */ 
+:root{ 
+    --brand-color: #4CAF4F; 
+    --btn-text-color: #FFFFFF; 
+    --btn-outline-color: #4CAF4F; 
+} 
 
-q:before,
-q:after {
-  content: "";
-}
+*, *::before, *::after { 
+    padding: 0; 
+    margin: 0; 
+} 
 
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ol,
-ul,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  padding: 0;
-}
+q:before, q:after { 
+    content: ""; 
+} 
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
+html, body, h1, h2, h3, h4, p, ol, ul, li, figure, figcaption, blockquote, dl, dd { 
+    margin: 0; 
+    padding: 0; 
+} 
 
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
+html:focus-within { 
+    scroll-behavior: smooth; 
+} 
 
-ul,
-ol {
-  list-style: none;
-}
+body { 
+    min-height: 100vh; 
+    text-rendering: optimizeSpeed; 
+    line-height: 1.5; 
+    font-family: "Inter", sans-serif; 
+    font-optical-sizing: auto;     
+    font-style: normal;             
+    /* background-color: #F9FAFF; */ 
+} 
 
-a {
-  text-decoration: none;
-}
+ul, ol { 
+    list-style: none; 
+} 
 
-img {
-  max-width: 100%;
-  display: block;
-}
+a { 
+    text-decoration: none; 
+} 
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/* css reset end */
+img { 
+    max-width: 100%; 
+    display: block; 
+} 
 
-.container{
-    max-width: 1152px;
-    margin: auto;
-    justify-content: space-between;
-}
+input, button, textarea, select { 
+    font: inherit; 
+} 
+/* css reset end */ 
 
-.flex{
-    display: flex;
-}
+/* common css start */ 
+.container{ 
+    max-width: 1152px; 
+    margin: auto; 
+    justify-content: space-between; 
+} 
 
-.align-items-center{
-   align-items: center;
-}
+.flex{ 
+    display: flex; 
+} 
 
-.nav{
-    padding: 30px;
-}
+.align-items-center{ 
+    align-items: center; 
+} 
 
-.btn{
-  font-size: 14px;
-  font-weight: 500;
-  padding: 20px 10px;
-  border-radius: 6px;
-}
-}
+.btn { 
+    font-size: 14px;  
+    font-weight: 500; 
+    padding: 8px 24px; 
+    border-radius: 6px;     
+    cursor: pointer; 
+    text-align: center; 
+    border: 2px solid transparent; 
+    text-decoration: none; 
+    display: inline-block; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
+    line-height: 20px; 
+} 
 
-.navLogo , .navMenu{
-    width: 50%;
-}
+.btnLogin { 
+    background-color: transparent; 
+    color: var(--brand-color); 
+    border: 2px solid transparent; 
+    width: 77px; 
+    height: 40px; 
+} 
 
-.navMenu ul{
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
+.btnLogin { 
+    width: 77px; 
+    height: 40px; 
+    background-color: transparent; 
+    color: var(--brand-color); 
+    border: none; 
+} 
 
-.navbtn li a{
-   text-decoration: none;
-   color: var(--btn-color);
-   font-weight: 500;
-   transition: 0.
-}
+.btnBg { 
+    width: 91px; 
+    height: 40px; 
+    background-color: var(--brand-color); 
+    color: var(--btn-text-color); 
+    border: 2px solid #4CAF4F; 
+} 
+/* common css end */ 
+
+nav{ 
+    padding: 30px; 
+    width: 100%; 
+    position: absolute; 
+} 
+
+nav .flex { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    column-gap: 0px; 
+} 
+
+/*navbar start */ 
+
+/* logo */ 
+.navLogo { 
+    width: 154.49px; /* Fixed width for logo area */ 
+    margin-right: 166.01px; 
+} 
+
+/* menu */ 
+.navMenu { 
+    width: 588px; /* Fixed width for menu area */ 
+    /* display: flex; */ 
+    justify-content: center; /* Keeps menu centered within its section */ 
+    margin-right: 124.5px; 
+} 
+
+/* menu items */ 
+.navMenu ul { 
+    /* display: flex; */ 
+    /* list-style: none; */ 
+    margin: 0; 
+    padding: 0; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px; 
+} 
+
+.navMenu ul li a { 
+    color: #18191F; /* ✅ Your special color for menu links only */ 
+    text-decoration: none; /* Remove underline */ 
+    font-weight: 500; 
+    font-size: 16px; 
+} 
+
+/* button */ 
+.navbtn { 
+    width: 182px; /* Fixed width for button area */ 
+    /* display: flex; */ 
+    justify-content: flex-end; /* Push buttons to the right end */ 
+} 
+
+.navbtn ul { 
+    /* display: flex; */ 
+    gap: 14px; 
+    margin: 0; 
+    padding: 0; 
+} 
+
+.navbtn li a{ 
+    text-decoration: none; 
+    color: var(--brand-color); 
+    font-weight: 500; 
+    transition: 0.; 
+} 
+/* navbar end */ 
+
+/* hero section start */ 
+#hero{ 
+    height: 599px; /* total hero height after navigation */ 
+    display: flex; 
+    align-items: right; 
+    justify-content: flex-start; 
+    /* padding: 245px; */ 
+} 
+
+.heroWrapper{ 
+    justify-content: space-between; 
+} 
+
+/* Inside Hero Container */ 
+.hero-content { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+} 
+
+/* Hero Text (Left Side) */ 
+.hero-text { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    gap: 25px; 
+    flex: 1; 
+} 
+
+/* Title */ 
+.hero-text h1 { 
+    font-size: 56px; 
+    font-weight: 700; 
+    color: #263238; 
+    max-width: 550px; 
+    line-height: 1.2; 
+} 
+
+/* Paragraph */ 
+.hero-text p { 
+    font-size: 18px; 
+    color: #717171; 
+    max-width: 480px; 
+    line-height: 1.6; 
+} 
+
+/* Register Button */ 
+.btn.btn-primary { 
+    background-color: #4CAF4F; /* Nexcent green */ 
+    border: none; 
+    color: white; 
+    padding: 14px 40px; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    margin-top: 385.5px; /* distance from nav bar */ 
+    transition: background-color 0.3s ease; 
+} 
+
+.btn.btn-primary:hover { 
+    background-color: #388E3C; 
+} 
+
+/* Hero Image (Right Side) */ 
+.hero-image { 
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-end; 
+} 
+
+.hero-image img { 
+    width: 500px; 
+    height: auto; 
+} 
+/* hero section end */
