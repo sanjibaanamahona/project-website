@@ -2,7 +2,11 @@
 :root{ 
     --brand-color: #4CAF4F; 
     --btn-text-color: #FFFFFF; 
-    --btn-outline-color: #4CAF4F; 
+    /* --btn-outline-color: #4CAF4F;  */
+    --default-bg: #F5F7FA;
+    /* --white-bg: #FFFFFF; */
+    --title-color: #4D4D4D;
+    --para-color: #717171;
 } 
 
 *, *::before, *::after { 
@@ -29,8 +33,8 @@ body {
     line-height: 1.5; 
     font-family: "Inter", sans-serif; 
     font-optical-sizing: auto;     
-    font-style: normal;             
-    /* background-color: #F9FAFF; */ 
+    font-style: normal;  
+     overflow-x: hidden;           
 } 
 
 ul, ol { 
@@ -66,7 +70,7 @@ input, button, textarea, select {
     align-items: center; 
 } 
 
-.btn { 
+.btn{ 
     font-size: 14px;  
     font-weight: 500; 
     padding: 8px 24px; 
@@ -85,18 +89,11 @@ input, button, textarea, select {
 .btnLogin { 
     background-color: transparent; 
     color: var(--brand-color); 
-    border: 2px solid transparent; 
+     border: 2px solid transparent;  
     width: 77px; 
     height: 40px; 
 } 
 
-.btnLogin { 
-    width: 77px; 
-    height: 40px; 
-    background-color: transparent; 
-    color: var(--brand-color); 
-    border: none; 
-} 
 
 .btnBg { 
     width: 91px; 
@@ -124,22 +121,19 @@ nav .flex {
 
 /* logo */ 
 .navLogo { 
-    width: 154.49px; /* Fixed width for logo area */ 
+    width: 154.49px; 
     margin-right: 166.01px; 
 } 
 
 /* menu */ 
 .navMenu { 
-    width: 588px; /* Fixed width for menu area */ 
-    /* display: flex; */ 
-    justify-content: center; /* Keeps menu centered within its section */ 
+    width: 588px;  
+    justify-content: center;
     margin-right: 124.5px; 
 } 
 
 /* menu items */ 
-.navMenu ul { 
-    /* display: flex; */ 
-    /* list-style: none; */ 
+.navMenu ul {  
     margin: 0; 
     padding: 0; 
     align-items: center; 
@@ -148,17 +142,17 @@ nav .flex {
 } 
 
 .navMenu ul li a { 
-    color: #18191F; /* ✅ Your special color for menu links only */ 
-    text-decoration: none; /* Remove underline */ 
+    color: #18191F;  
+    text-decoration: none; 
     font-weight: 500; 
     font-size: 16px; 
 } 
 
 /* button */ 
 .navbtn { 
-    width: 182px; /* Fixed width for button area */ 
-    /* display: flex; */ 
-    justify-content: flex-end; /* Push buttons to the right end */ 
+    width: 182px; 
+     display: flex; 
+    justify-content: flex-end; 
 } 
 
 .navbtn ul { 
@@ -172,85 +166,165 @@ nav .flex {
     text-decoration: none; 
     color: var(--brand-color); 
     font-weight: 500; 
-    transition: 0.; 
 } 
 /* navbar end */ 
 
 /* hero section start */ 
 #hero{ 
-    height: 599px; /* total hero height after navigation */ 
+  /* height: 599px;  */
+    height: auto;
+    padding: 96px;
     display: flex; 
-    align-items: right; 
-    justify-content: flex-start; 
-    /* padding: 245px; */ 
+    align-items: center; 
+    background-color: var(--default-bg);  
 } 
 
 .heroWrapper{ 
-    justify-content: space-between; 
+    display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+    max-width: 1152px;  
+  margin: 0 auto; 
+  width: 100%; 
 } 
 
 /* Inside Hero Container */ 
-.hero-content { 
+.heroContent { 
     display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    width: 100%; 
-} 
-
-/* Hero Text (Left Side) */ 
-.hero-text { 
-    display: flex; 
+    /* align-items: flex-start;  */
+    /* height: auto;
+    width: 657px; */
+    /* height: 276px;  */
+    /* width: auto;
+    max-width: 100%; */
     flex-direction: column; 
-    align-items: flex-start; 
-    justify-content: flex-start; 
-    gap: 25px; 
-    flex: 1; 
+  justify-content: flex-start;
+   margin-top: 161.5px;
+  margin-bottom: 161.5px;
+    /* width: 100%;
+  max-width: 1152px; */
+  /* gap: 104px;   */
+}
+
+
+ /* Hero Text  */
+ /* Hero content */
+.heroContent h1:first-child {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 76px;
+  color: var(--title-color); 
+  margin-bottom: 0px;
+  white-space: nowrap;
+}
+
+.heroContent h1:nth-child(2){
+  font-weight: 600; 
+  font-size: 64px;
+  line-height: 76px; 
+  color: var(--brand-color); 
+  margin-bottom: 0px; 
+}
+
+.heroContent p {
+  font-weight: 400; 
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--para-color);
+  margin-bottom: 32px; 
+}
+
+/* Hero button */
+.heroContent .btn {
+  font-weight: 400; 
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--btn-text-color);
+  background-color: var(--brand-color);
+  width: 128px;
+  height: 52px;
+  padding: 14px 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/* Hero Image */ 
+.heroImg { 
+    width: 391px;
+  height: 407px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 96px; 
 } 
 
-/* Title */ 
-.hero-text h1 { 
-    font-size: 56px; 
-    font-weight: 700; 
-    color: #263238; 
-    max-width: 550px; 
-    line-height: 1.2; 
-} 
-
-/* Paragraph */ 
-.hero-text p { 
-    font-size: 18px; 
-    color: #717171; 
-    max-width: 480px; 
-    line-height: 1.6; 
-} 
-
-/* Register Button */ 
-.btn.btn-primary { 
-    background-color: #4CAF4F; /* Nexcent green */ 
-    border: none; 
-    color: white; 
-    padding: 14px 40px; 
-    border-radius: 4px; 
-    font-size: 16px; 
-    font-weight: 600; 
-    cursor: pointer; 
-    margin-top: 385.5px; /* distance from nav bar */ 
-    transition: background-color 0.3s ease; 
-} 
-
-.btn.btn-primary:hover { 
-    background-color: #388E3C; 
-} 
-
-/* Hero Image (Right Side) */ 
-.hero-image { 
-    flex: 1; 
-    display: flex; 
-    justify-content: flex-end; 
-} 
-
-.hero-image img { 
-    width: 500px; 
-    height: auto; 
+.heroImg img {  
+     width: 100%;
+  height: auto;
+  display: block;
 } 
 /* hero section end */
+
+
+/* client section start */
+#clients{
+  background-color: #FFFFFF; /* white background */
+  padding-top: 40px; 
+}
+
+#clients .container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 40px; /* optional: to prevent touching edges */
+}
+
+
+.clientsWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: px; 
+  margin: 0 auto;
+}
+
+/* Title */
+.clientsWrapper h2{
+  font-weight: 600; 
+  font-size: 36px; 
+  line-height: 44px;
+  color: var(--title-color); 
+  margin: 0;
+}
+
+/* Subtitle paragraph */
+ .clientsWrapper p{
+  font-weight: 400; 
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--para-color);
+  margin: 0;
+  padding: 8px;
+}
+
+/* Logos container */
+.clientLogos.flex {
+  display: flex;
+  justify-content: center; /* center logos horizontally */
+  align-items: center; /* center logos vertically */
+  gap: 136px; /* horizontal gap between logos */
+  flex-wrap: nowrap; /* prevent wrapping to next line */
+}
+
+/* Logos */
+.clientLogos img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain; /* ensures logo fits within 47x47 */
+}
+
+/* client section end */
